@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="../../assets/pics/svg/moon.svg" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik+Mono+One&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/nights.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TNoT - Nights</title>
+</head>
+<body>
+    <header>
+        <h1><img src="../../../assets/pics/svg/moon.svg" alt="Logo"> Thousand Nights of Terror</h1>
+        <a href="../../index.html"><img src="../../assets/pics/svg/home.svg" alt="home"></a>
+    </header>
+
+
+    <div class="sort">
+        <p>Сортування:</p>
+        <button class="sort-btn" id="sortButton">По важкості <img src="../../../assets/pics/svg/sort.svg" alt="sort"></button>
+        <button class="toggle-all-btn sort-btn">Впорядкувати</button>
+        <button class="sort-btn" id="resetButton">Скинути</button>
+    </div>
+
+
+    <div class="MoonTypes-list">
+
+
+        <div class="item">
+            <img class="Moon" src="../../assets/pics/moons/MoonDefaultNEW.png" alt="Moon-Standart">
+            <div class="content">
+                <h2 class="toggle-header">
+                    Стандартна ніч 
+                    <span class="DifficultySpan">1/20</span>
+                    <span class="Days">1-1000</span>
+                </h2>
+                <div class="content-text">
+                <p>
+                    Типова ніч – без особливих подій чи аномалій.
+                    Освітлення середнє, видимість середня, навколишнє середовище взагалом спокійне. 
+                    <br><img src="../../assets/pics/svg/X-mark.svg" alt="X"> Ніяких аномалій, тільки стандартні вороги. 
+                    <br>Ідеальний фон для звичайних посиділок чи базових ігрових механік.
+                    <br><br>//Включає в себе ворогів:
+                    <ul>
+                        <li>Тіньовий блукач - слабка напівпрозора сутність, яка повільно рухається у темряві. Атакує тільки якщо гравець занадто близько.</li>
+                        <li>Темні вовки - середні по силі сутності, які часто нападають групами</li>
+                        <li>Стражі глибини - незримі створіння, які атакують без звуків. Бояться світла та теплих приміщень</li>
+                        <li>Темний птах - простий ворог, який літає в темряві і атакує за допомогою своїх різких і швидких нападів. Не дуже сильний, але агресивний.</li>
+                        <li>Тео Шляпа - нейтральна істота (скоріше людина), яка просто подорожує, але буде атакувати у відповідь на агресію. <br><strong>[Трапляється в дні 50-1000]</strong></li>
+                    </ul>
+                </p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="item">
+            <img class="Moon" src="../../assets/pics/moons/ThunderMoon.png" alt="Moon-Standart">
+            <div class="content">
+                <h2 class="toggle-header">
+                    Грозова ніч 
+                    <span class="DifficultySpan">3/20</span>
+                    <span class="Days">10-1000</span>
+                </h2>
+                <div class="content-text">
+                <p>
+                    Ця ніч славиться своїм дощем та блискавками. 
+                    Блискавки мають невеликий шанс вдарити в ваший дім, стережітся дерев'яних дахів!
+                    <br>Легкі не закріплені об'єкти можуть підлітати від сильного вітру.
+                    <br>Види грозової ночі:
+                    <ul>
+                        <li>Стандартна (85% - [10-1000])</li>
+                        <li>Сильна (12% - [50-1000])</li>
+                        <li>Екстримальна (3% - [100-1000])</li>
+                    </ul>
+                    Вороги:
+                    <ul>
+                        <li>*Те що й Стандартна ніч</li>
+                        <li>Міні блискавка - літаюча істота яка інколи підпалює об'єкти навколо себе</li>
+                        <li>Бос Громовержець - сильна істота, яка має змогу руйнувати деякі будівлі. <br><strong>Шанс 5% [Трапляється в дні 200-1000]</strong></li>
+                    </ul>
+                </p>
+                </div>
+            </div>
+        </div> 
+
+
+        <div class="item">
+            <img class="Moon" src="../../assets/pics/moons/MoonSleepyEye.png" alt="Moon-Sleepy">
+            <div class="content">
+                <h2 class="toggle-header">
+                    Ніч спляче око
+                    <span class="DifficultySpan">0/20</span>
+                    <span class="Days">20-1000</span>
+                </h2>
+                <div class="content-text">
+                <p>
+                    Ця ніч дозволить вам відпочити після всіх страждань. 
+                    Жодних загроз, жодних тривог — лише спокійна атмосфера, що дарує відчуття безпеки. 
+                    Це ідеальний час для відпочинку, споглядання нічного неба або тихого блукання під світлом дрімотного Місяця.
+                    Також це хороший шанс отримати більше часу на відновлення. 
+                    <br><img src="../../assets/pics/svg/info.svg" alt="info"> Трапляється частіше всього після важких ночей!
+                </p>
+                </div>
+            </div>
+        </div> 
+
+        
+        <div class="item">
+            <img class="Moon" src="../../assets/pics/moons/MoonHot.png" alt="Moon-Standart">
+            <div class="content">
+                <h2 class="toggle-header">
+                    Гаряча ніч 
+                    <span class="DifficultySpan">6/20</span>
+                    <span class="Days">50-1000</span>
+                </h2>
+                <div class="content-text">
+                <p>
+                    В цю ніч буде досить гарячо, температура буде сягати 40-45C°. 
+                    Щоб не пересохнути від жаркості запасітся холодною водою або чимось, що вас охолодить бажано знайти кондеціонер.
+                    <br>Також в цю ніч буде випаровуватися вода тому збільшується шанс, що на наступні найближчі ночі буде Rain-Lightning.
+                    <br>Більшість монстрів отримують дебаф до швидкості атаки
+                    <br>Додаткові монстри(Отримують баф до сили в гарячих місцях):
+                    <ul>
+                        <li>Вогняний скорпіон - Броньоване чудовисько з отруйним жалом, що світиться від спеки. 
+                            Його панцир може витримати вибухи, а кігті здатні розривати метал. 
+                            Появляється рідко, але шкоди може принести багато! 
+                            <br><em>Вразливий до холодної води</em>
+                        </li>
+                        <li>Червоний слизень - невелика за розміром але досить агресивна істота. Також вразлива до води.</li>
+                    </ul>
+                </p>
+                </div>
+            </div>
+        </div> 
+
+
+        <div class="item">
+            <img class="Moon" src="../../assets/pics/moons/MoonBlood.png" alt="Moon-Blood">
+            <div class="content">
+                <h2 class="toggle-header">
+                    Кровава ніч
+                    <span class="DifficultySpan">9/20</span>
+                    <span class="Days">50-1000</span>
+                </h2>
+        
+                <div class="content-text">
+                <p>
+                    Це жорстока та непередбачувана ніч, під час якої природні процеси набувають агресивних аномалій.
+                    <br>Моби стають сильнішими, деякі з них набувають можливості руйнувати будівлі.
+                    <br><img src="../../assets/pics/svg/anomaly.svg" alt="anomaly"> Аномалії: 
+                    <ul>
+                        <li>Неправдиві монстри</li>
+                        <li>Дружелюбні істоти можуть стати агресивними</li>
+                        <li>Безсмертні вороги</li>
+                    </ul>
+                </p>
+                <p>
+                    Додаткові вороги:
+                    <ul>
+                        <li>Кроваві вовки - поводять себе так само як і темні, тільки ці можуль лікуватися за рахунок чужої крові</li>
+                        <li>Кігтьовики - кровожерливі істоти які виривають всі двері на своєму шляху</li>
+                        <li>Кровавий караван - невелика група людей які часто приходять під кінець ночі. Мають дорогі предмети на продажу</li>
+                    </ul>
+                </p>
+                <p>Ця ніч точно появиться в день #50, #88, #150, #220
+                    <br><img src="../../assets/pics/svg/info.svg" alt="info"><em> Знайди укриття або готуйся до найгіршого</em>
+                </p>
+                </div>
+            </div>
+        </div> 
+
+
+        <div class="item">
+            <img class="Moon" src="../../assets/pics/moons/MoonToxic.png" alt="Moon-Toxic">
+            <div class="content">
+                <h2 class="toggle-header">
+                    Токсична ніч 
+                    <span class="DifficultySpan">8/20</span>
+                    <span class="Days">200-1000</span>
+                </h2>
+        
+                <div class="content-text">
+                    <p>
+                        Токсична ніч — доволі небезпечна штука!  
+                        Якщо вам не пощастило натрапити на таку, то будьте готові, що ваш дім може роз'їсти кислота.  
+                        Ця ніч залишає за собою кислотні калюжі на 3–4 дні вперед.  
+                        З унікальних мобів тільки:  
+                        <ul>
+                            <li>Кислотний слизень — досить слабка істота, але якщо швидко не знищити, то він може розмножитися в кислоті до гігантських масштабів.</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </div> 
+
+
+        <div class="item">
+            <img class="Moon" src="../../assets/pics/moons/MoonWorm.png" alt="Moon-Worm">
+            <div class="content">
+                <h2 class="toggle-header">
+                    Черв'якова ніч
+                    <span class="DifficultySpan">4/20</span>
+                    <span class="Days">30-1000</span>
+                </h2>
+        
+                <div class="content-text">
+                <p>
+                    Цікавий вид ночі який трапляється частіше всього після доща.
+                    <br>Черв'яки будуть вириватися з недр землі на поверхню щоб поживитися чимось цікавим.
+                    <br>В основному черв'яки в цю ніч не дуже агресивні, ломають підлогу в домі. Деякі більші види можуть кусатися.
+                </p>
+                </div>
+            </div>
+        </div> 
+
+
+        <div class="item">
+            <img class="Moon" src="../../assets/pics/moons/MoonEvilWorm.png" alt="Moon-EvilWorm">
+            <div class="content">
+                <h2 class="toggle-header">
+                    Пекельна Черв'якова ніч
+                    <span class="DifficultySpan">12/20</span>
+                    <span class="Days">180-1000</span>
+                </h2>
+        
+                <div class="content-text">
+                <p>
+                    Це уже не просто черв'якова ніч, ні..
+                    <br>Це просто жах! Як тільки зійде місяць великі черв'яки з великою швидкістю почнуть вириватися на поверхню.
+                    Більша частина з них агресивні до всього живого, хорошої протидії їм <strong>не існує.</strong>
+                    <br>Єдине хороше рішення це міцний будинок.
+                </p>
+                </div>
+            </div>
+        </div> 
+
+
+        <div class="item">
+            <img class="Moon" src="../../assets/pics/moons/MoonWind.png" alt="Moon-Wind">
+            <div class="content">
+                <h2 class="toggle-header">
+                    Вітряна ніч
+                    <span class="DifficultySpan">3/20</span>
+                    <span class="Days">5-1000</span>
+                </h2>
+        
+                <div class="content-text">
+                <p>
+                    Проста вітряна ніч. Характерна своїм повіваючим вітерком зі швидкістю 8м/с
+                    <br>Моби:
+                    <ul>
+                        <li>Літаючий слизень - прилетів прямо з іншого континенту, в чому помогла йому його парасоля. Трохи сильніший за простого слизня</li>
+                        <li>Метелики - Це прості метелики! Ніяк не загрожують вашому життю</li>
+                        <li>Світлий орел - Ця істота любить чекати свою жертву і різко нападати!</li>
+                    </ul>
+                </p>
+                </div>
+            </div>
+        </div> 
+
+
+        <div class="item">
+            <img class="Moon" src="../../assets/pics/moons/MoonPresent.png" alt="Moon-Present">
+            <div class="content">
+                <h2 class="toggle-header">
+                    Подарункова ніч 
+                    <span class="DifficultySpan">0/20</span>
+                    <span class="Days">1-1000</span>
+                </h2>
+        
+                <div class="content-text">
+                <p>
+                    Досить рідкісна ніч.
+                    Хоч ворогів в цю ніч немає, вам всеодно прийдеться постаратися)
+                    <br>Десь на карті появиться один подарунок [середнього розміру], який необхідно знайти.
+                    <br>Якщо ви не знайдете подарунок, то наступна ніч гарантовано буде складністю від 6-12.
+                    <br><img src="../../assets/pics/svg/info.svg" alt="info"> Не стосується унікальних ночей та не спрацює якщо наступна ніч строго зазначена
+                    <br>Якщо ви знайшли подарунок, отримаєте приємний бонус!
+
+                </p>
+                </div>
+            </div>
+        </div> 
+
+
+        <div class="item">
+            <img class="Moon" src="../../assets/pics/moons/MoonLava.png" alt="Moon-Lava">
+            <div class="content">
+                <h2 class="toggle-header">
+                    Лавова ніч 
+                    <span class="DifficultySpan">15/20</span>
+                    <span class="Days">250-1000</span>
+                </h2>
+        
+                <div class="content-text">
+                <p>
+                    Жахлива ніч яка не буде вас щадити. 
+                    <br>З неба буде падати лава, яка підпалює та плавить легкі матеріали та речі.
+                    <br>Моби:
+                    <ul>
+                        <li>Лавовий Скеле-монстр - ходячий кусок лави. Залишає за собою дорогу з вогня, нападає на все, що не горить</li>
+                        <li>Лавові слизні - слизні які атакують групами з схожою метою що і Скеле-монстр</li>
+                        <li>Бос Лавовий Імператор - сильна істота, яка зможе злегкістю знишити не підготовленого гравця <br><strong>Шанс 3%</strong></li>
+                    </ul>
+                </p>
+                </div>
+            </div>
+        </div> 
+
+
+    </div>
+    
+    <script src="../../assets/script/Difficulty.js"></script>
+    <script src="../../assets/script/Colapser.js"></script>
+</body>
+</html>
+
+
+
+<!-- ITEM BASE
+
+<div class="item">
+    <img class="Moon" src="../../assets/pics/moons/MoonDefaultNEW.png" alt="Moon-Standart">
+    <div class="content">
+        <h2 class="toggle-header">
+            Стандартна ніч 
+            <span class="DifficultySpan">1/20</span>
+            <span class="Days">1-1000</span>
+        </h2>
+
+        <div class="content-text">
+        <p>
+
+        </p>
+        </div>
+    </div>
+</div> 
+
+-->

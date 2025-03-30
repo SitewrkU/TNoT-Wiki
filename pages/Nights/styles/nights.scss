@@ -1,0 +1,262 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+::-webkit-scrollbar {
+    width: 8px; 
+    height: 8px; 
+}
+::-webkit-scrollbar-track {
+    background: #1a1a1a; 
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+::selection {
+    background-color: #1d325a; /* Жовтий фон */
+    color: #ffffff; /* Чорний текст */
+}
+body{
+    font-family: "Poppins", sans-serif;
+    background: #1A1C1F;
+    color: #E0E0E0;
+}
+
+
+
+header{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    a{
+        height: 30px;
+        width: 30px;
+        margin-left: auto;
+        margin-right: 10px;
+        transition: all 0.2s ease-in-out;
+        &:hover{
+            transform: scale(1.2);
+        }
+        &:focus{
+            transform: scale(0.9);
+        }
+    }
+    h1{
+        img{
+            margin-right: 5px;
+            vertical-align:-2px;
+        }
+    }
+}
+
+
+.Moon{
+    margin-right: 10px;
+    border: 2px solid white;
+    border-radius: 5px;
+    width: 100px;
+    height: 100px;
+    image-rendering: pixelated;
+    transition: transform 0.4s ease-out;
+    display: block;
+}
+
+.sort{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+
+    font-family: "Montserrat", sans-serif;
+    color: #cccccc;
+    padding: 8px;
+    display: flex; 
+    flex-wrap: nowrap; 
+    overflow-x: auto; 
+    overflow-y: hidden;
+    align-items: center;
+
+    border: 2px solid rgb(202, 202, 202);
+    border-left: none;
+    border-right: none;
+
+    max-height: 50px;
+    width: 100%;
+
+    .sort-btn{
+        cursor: pointer;
+        padding: 5px 10px;
+        color: #cccccc;
+        background: none;
+        border-radius: 5px;
+        border: 2px #cccccc solid;
+        margin-left: 15px;
+        margin-right: 10px;
+        flex-shrink: 0;
+        white-space: nowrap;
+        width: auto;
+        transition: all 0.2s ease-in-out;
+        &:hover{
+            transform: scale(1.04);
+        }
+        &:active{
+            transform: scale(0.95);
+        }
+        img{
+            vertical-align:middle;
+        }
+    }
+
+    #resetButton{
+        margin-right: 0px;
+    }
+
+    .toggle-all-btn{
+        margin-right: 0;
+        margin-left: auto;
+    }
+
+}
+
+
+.MoonTypes-list {
+    width: fit-content;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column; 
+    gap: 20px; 
+
+    
+    .item {
+        margin-right: 10px;
+        margin-left: 10px;
+        max-height: 100%;
+        max-width: 600px;
+        
+        border-radius: 10px;
+        background-color: #282B30;
+
+        display: flex;
+        align-items: flex-start;
+        padding: 15px;
+        transition: all 0.15s ease-in-out;
+        &:hover {
+            box-shadow: 0px 0px 10px #ffffff50;
+            transform: translateY(-2px); /* Трохи піднімає блок */
+        }
+
+        .content-text {
+            max-height: 100vh; /* Максимальна висота для плавного згортання */
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+            opacity: 1;
+            p{
+                font-family: "Montserrat", sans-serif;
+                font-weight: 500;
+                color: #cccccc;
+                img{
+                    vertical-align:-2px;
+                }
+                &:first-of-type {
+                    padding-top: 5px;
+                }
+            }
+        }
+
+
+        h2 {
+            cursor: pointer;
+            font-size: 18px;
+            margin: 0;
+        }  
+        
+        ul {
+            font-family: "Montserrat", sans-serif;
+            margin-left: 30px;
+            li {
+                margin-top: 3px;
+                font-weight: 500;
+                font-size: 15px;
+                color: #a1a1a3;
+                &::marker {
+                    color: #cccccc; /* Колір маркера (помаранчевий) */
+                    font-size: 13px; /* Розмір маркера (можна коригувати) */
+                }
+            }
+        }
+        
+        .DifficultySpan{
+            font-size: 14px;
+            color: #282B30;
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-left: 5px;
+        }
+
+        .Days{
+            background: #7893a3;
+            font-size: 14px;
+            color: #282B30;
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-left: 5px;
+        }
+    }
+}
+.item .content-text.collapsed {
+    max-height: 0;
+    opacity: 0;
+}
+.item .Moon.collapsed {
+    border: 0;
+    margin-right: 0;
+    opacity: 0;
+    transform: scale(0.8);
+    width: 0;
+    height: 0;
+}
+
+
+
+
+@media (max-width: 575px) {
+    body{
+        -webkit-tap-highlight-color: transparent;
+    }
+    header{
+        h1{
+            font-size: 20px;
+        }
+        img{
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    .MoonTypes-list {
+        .item{
+            p{
+                font-size: 13px;
+            }
+            li {
+                font-size: 13px;
+            }
+            .Days{
+                display: inline-block;
+            }
+        }
+    }
+    .sort{
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}

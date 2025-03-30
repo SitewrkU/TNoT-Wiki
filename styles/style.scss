@@ -1,0 +1,194 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+::-webkit-scrollbar {
+    width: 8px; 
+    height: 8px; 
+}
+::-webkit-scrollbar-track {
+    background: #1a1a1a; 
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+::selection {
+    background-color: #1d325a; 
+    color: #ffffff; 
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out forwards;
+}
+.fade-in:nth-child(2) {
+    animation-delay: 0.5s;
+}
+.fade-in:nth-child(3) {
+    animation-delay: 0.7s;
+}
+
+
+body{
+    font-family: "Poppins", sans-serif;
+    background: #1A1C1F;
+    color: #E0E0E0;
+    p{
+        font-family: "Montserrat", sans-serif;
+    }
+}
+
+header{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    a{
+        height: 30px;
+        width: 30px;
+        margin-left: auto;
+        margin-right: 10px;
+        transition: all 0.2s ease-in-out;
+        &:hover{
+            transform: scale(1.2);
+        }
+        &:focus{
+            transform: scale(0.9);
+        }
+    }
+    h1{
+        img{
+            margin-right: 5px;
+            vertical-align:-2px;
+        }
+    }
+}
+
+.overview{
+    text-align: center;
+    margin: 10px 15px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    p{
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+.item-list{
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #282B30;
+    margin: 0 auto;
+    display: flex;
+    width: 340px;
+    flex-wrap: wrap;
+
+    .item{
+        position: relative;
+        padding: 2px 7px;
+        margin: 10px;
+        border: 2px solid white;
+        border-radius: 10px;
+        width: 140px;
+        height: 150px;
+
+        &:first-child{
+            background-image: url('../assets/pics/moons/MoonDefaultNEW.png'); 
+            image-rendering: pixelated;
+            background-size: cover; 
+            background-position: center 70px;
+            background-repeat: no-repeat; 
+
+            cursor: pointer; 
+            transition: transform 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.664);
+            transition: background 0.3s ease-in-out;
+            border-radius: 10px; 
+        }
+        &:hover::before {
+            background: rgba(0, 0, 0, 0.267); 
+        }
+
+        p{
+            color: rgb(255, 255, 255);
+            font-size: 13px;
+        }
+        h2{
+            font-size: 20px;
+        }
+    }
+}
+
+.version {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+
+@media (max-width: 575px) {
+    body{
+        -webkit-tap-highlight-color: transparent;
+    }
+    header{
+        h1{
+            font-size: 20px;
+        }
+        img{
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+@media (max-width: 375px) {
+    .item-list{
+        align-items: center;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 80%;
+        .item{
+            width: 90%;
+            &:first-child{
+                background-position: center 50px;
+            }
+        }
+    }
+}
